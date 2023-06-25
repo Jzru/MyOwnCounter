@@ -13,6 +13,8 @@ const descriptionThree = document.querySelector('#description-three');
 const role = document.querySelector('#role');
 
 
+let saveChanges = []
+
 
 const searchBtn = document.querySelector('.search-btn');
 const search = document.querySelector('.search-engine')
@@ -113,7 +115,10 @@ const addCounter = () => {
     deleteBtn.addEventListener('click', remove);
     editBtn.addEventListener('click', editCounter);
 
-    localStorage.setItem("save", JSON.stringify(arrayWithStringsToSave))
+
+    saveChanges.push(newCounter)
+
+    localStorage.setItem("save", JSON.stringify(saveChanges))
     
     
 }
