@@ -112,6 +112,8 @@ const addCounter = () => {
 
     deleteBtn.addEventListener('click', remove);
     editBtn.addEventListener('click', editCounter);
+
+    localStorage.setItem("save", JSON.stringify(arrayWithStringsToSave))
 }
 
 const searchEngine = () => {
@@ -133,6 +135,8 @@ const searchChampion = e => {
         }
  })
 }
+
+localStorage.getItem('save')
 
 turnOffBtn.addEventListener('click', closeWindow);
 addBtn.addEventListener('click', openWindow);
