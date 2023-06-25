@@ -11,16 +11,12 @@ const descriptionOne = document.querySelector('#description-one');
 const descriptionTwo = document.querySelector('#description-two');
 const descriptionThree = document.querySelector('#description-three');
 const role = document.querySelector('#role');
-
-
-let saveChanges = []
-
-
 const searchBtn = document.querySelector('.search-btn');
 const search = document.querySelector('.search-engine')
 const tablePosition = document.querySelectorAll('td')
 const inputSearch = document.querySelector('#search')
 let idNumber = 0;
+let saveChanges = []
 
 const closeWindow = () => {
     addWindow.classList.add('cancel');
@@ -115,8 +111,27 @@ const addCounter = () => {
     deleteBtn.addEventListener('click', remove);
     editBtn.addEventListener('click', editCounter);
 
+    const counterObject = {
+        id: idNumber,
+        champion: selectedCounter.value,
+        role: role.value,
+        counters: [
+          {
+            counter: counterOne.value,
+            description: descriptionOne.value
+          },
+          {
+            counter: counterTwo.value,
+            description: descriptionTwo.value
+          },
+          {
+            counter: counterThree.value,
+            description: descriptionThree.value
+          }
+        ]
+      };
 
-    saveChanges.push(newCounter)
+    saveChanges.push(counterObject)
 
     localStorage.setItem("save", JSON.stringify(saveChanges))
     
