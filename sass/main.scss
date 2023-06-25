@@ -1,0 +1,282 @@
+@use 'reset';
+
+.header {
+    position: relative;
+    display: flex;
+    height: 40vh;
+    width: 100%;
+    background-image: url('../img/header.jpg');
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+
+    &__text {
+        position: absolute;
+        z-index: 10;
+        font-family: 'Lobster', cursive;
+        color: #FFD700;
+        cursor: default;
+        
+        &-h1 {
+            padding: 1rem;
+            font-size: 3.2rem;
+        }
+        
+        &-p {
+            font-size: 4.8rem;
+        }
+    }
+
+    &__shadow {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.35);
+        z-index: 2;
+    }
+
+}
+
+.add-window {
+    position: fixed;
+    display: block;
+    height: 80vh;
+    width: 80%;
+    margin:5% 10%;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.8);
+    background-color: #979797;
+    z-index: 100;
+
+    &__turnoff {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        border: none;
+        background: none;
+    }
+    &__turnoff:hover {
+        cursor: pointer
+    }
+
+}
+
+.cancel {
+    display:none;
+}
+.h2 {
+    margin-top: 2rem;
+    font-size: 2.4rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFD700;
+}
+
+.select-counter {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 20%;
+    flex-direction: row;
+
+
+    &__champion  {
+        display: flex;
+        width: 50%;
+        align-items: center;
+        flex-direction: column;
+        font-size: 1.6rem;
+    }
+
+    &__role {
+        width: 20%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        font-size: 1.6rem;    
+
+        &-select {
+            margin-top: 1rem;
+            height: 30px;
+        }
+    }
+
+    &__add {
+        margin-top: 2rem;
+        display: flex;
+        height: 50%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__addBtn {
+        display: flex;
+        padding: 0.5rem;
+        border:1px solid transparent ;
+        background: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        color:lime;
+        transition:  border .3s .3s, scale .5s;
+    }
+
+    &__addBtn:hover {
+        cursor: pointer;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        scale: 1.1;
+    }
+    &__info {
+        font-size: 1.2rem;
+        width: 20%;
+        justify-content: end;
+
+        & p {
+            margin-top: 1.2rem;
+            margin-left: 8rem;
+        }
+    }
+    &__info:hover {
+        cursor: default;
+    }
+}
+
+input {
+    margin-top: 1rem;
+    width: 200px;
+    height: 30px;
+    border: none;
+    font-size: 2rem;
+}
+
+.own-counter {
+    margin-top: 2rem;
+    position: relative;
+    display: flex;
+
+    &__champion {
+        display: flex;
+        width: 50%;
+        align-items: center;
+        flex-direction: column;
+        font-size: 1.6rem;
+    }
+    &__description {
+        display: flex;
+        width: 50%;
+        align-items: center;
+        flex-direction: column;
+        font-size: 1.6rem;
+
+        & textarea {
+            margin-top: 1rem;
+            resize: none;
+            min-width: 300px;
+            max-width: 300px;
+            max-height: 80px;
+        }
+
+        & p {
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.section {
+    position: relative;
+    margin: 5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.search-engine {
+    position: absolute;
+    display: block;
+    top: -40px;
+    right: 5vh;
+}
+
+.table {
+    position: relative;
+    width: 1200px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: default;
+}
+
+.table-header {
+    font-size: 2.4rem;
+    background-color: rgb(90, 90, 90);
+    color: #FFD700;
+
+    & th {
+        padding: 5px 0px;
+    }
+
+    &__th {
+        width: 258px;
+    }
+    &__role {
+        width: 68px;
+    }
+    &__btn {
+        width: 50px;
+    }
+}
+
+.btn {
+    margin-top: 5px;
+    border: none;
+    background: none;
+    transition: scale .5s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    scale: 1.3;
+}
+
+
+
+.counter {
+    text-align: center;
+    font-size: 2rem;
+    background-color: rgb(180, 180, 180);
+    color: #0028FF;
+}
+
+.edit-btn {
+    background-image: url(../img/edit.svg);
+    background-position: center;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+    transition: scale .5s;
+    transform: translateY(-3px);
+}
+
+.edit-btn:hover {
+    cursor: pointer;
+    scale: 1.2;
+}
+
+.delete-btn {
+    background-image: url(../img/x-square.svg);
+    background-position: center;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+    transition: scale .5s;
+    transform: translateY(-3px);
+}
+
+.delete-btn:hover {
+    cursor: pointer;
+    scale: 1.2;
+}
+.off {
+    display: none;
+}

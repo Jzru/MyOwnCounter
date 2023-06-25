@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyOwnCounter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+        
+    <div class="add-window cancel">
+        <button class="add-window__turnoff"><img src="./img/x.svg"></button>
+        <h2 class="h2">add counter</h2>
+        <div class="select-counter">
+            <div class="select-counter__champion">
+                <label for="champion">
+                    Display name:</label>
+                <input id="champion" type="text" placeholder="Champion">
+            </div>
+            <div class="select-counter__role">
+                <label for="role">Select role:</label>
+                <select class="select-counter__role-select"id="role">
+                    <option class="opinion">Top</option>
+                    <option class="opinion">Jng</option>
+                    <option class="opinion">Mid</option>
+                    <option class="opinion">Bot</option>
+                    <option class="opinion">Sup</option>
+                </select>
+            </div>
+            <div class="select-counter__add">
+                <button class="select-counter__addBtn"><img src="./img/plus-circle.svg">Add counter</button>
+            </div>
+            <div class="select-counter__info">
+                <p><img src="./img/info.svg">
+                    You can always change the content</p>
+            </div>
+        </div>
+        <hr>
+        <div class="own-counter">
+            <div class="own-counter__champion">
+                <label for="counter-one">First counter name:</label>      
+                <input id="counter-one" type="text" placeholder="Champion">
+            </div>
+            <div class="own-counter__description">
+                <label for="description-one">Description:</label>
+                <textarea maxlength="200" class="description-one" placeholder="Lack of information..." id="description-one"></textarea>
+            </div>
+        </div>
+        <div class="own-counter">
+            <div class="own-counter__champion">
+                <label for="counter-two">First counter name:</label>      
+                <input id="counter-two" type="text" placeholder="Champion">
+            </div>
+            <div class="own-counter__description">
+                <label for="description-two">Description:</label>
+                <textarea maxlength="200" placeholder="Lack of information..." id="description-two"></textarea>
+            </div>
+        </div>
+        <div class="own-counter">
+            <div class="own-counter__champion">
+                <label for="counter-three">First counter name:</label>      
+                <input id="counter-three" type="text" placeholder="Champion">
+            </div>
+            <div class="own-counter__description">
+                <label for="description-three">Description:</label>
+                <textarea maxlength="200" placeholder="Lack of information..." id="description-three"></textarea>
+                <p>max 200 marks</p>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="header__text">
+            <h1 class="header__text-h1" data-tooltip="działa?">MyOwnCounter</h1>
+            <p class="header__text-p">Choose your our own league counters</p>
+        </div>
+        <div class="header__shadow"></div>
+    </header>
+        
+    <main>
+        <section class="section">
+            <table class="table" >
+                <thead class="table-header">
+                    <tr>
+                        <th class="table-header__th">Name</th>
+                        <th class="table-header__role">Role</th>
+                        <th class="table-header__th">Counter 1</th>
+                        <th class="table-header__th">Counter 2</th>
+                        <th class="table-header__th">Counter 3</th>
+                        <th class="counter__btn"><button class="add-btn btn"><img src="./img/plus-square.svg"></button></th>
+                        <th class="counter__btn"><button class="search-btn btn">
+                            <img src="./img/search.svg">
+                        </button></th>
+                    </tr>
+                </thead>
+                <tbody class="counter">
+                    <!-- <tr class="counter__list">
+                        <td class="counter__champion">tee</td>
+                        <td class="counter__role">top</td>
+                        <td class="counter__conuter-one">sio</td>
+                        <td class="counter__counter-two">ryz</td>
+                        <td class="counter__counter-three">cho</td>
+                        <td class="counter__edit">E</td>
+                        <td class="counter__delete">D</td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <div class="search-engine off">
+                <input id="search" type="text" placeholder="Search...">
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

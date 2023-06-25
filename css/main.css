@@ -1,0 +1,278 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(44, 44, 44);
+}
+
+.header {
+  position: relative;
+  display: flex;
+  height: 40vh;
+  width: 100%;
+  background-image: url("../img/header.jpg");
+  background-position: center;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+.header__text {
+  position: absolute;
+  z-index: 10;
+  font-family: "Lobster", cursive;
+  color: #FFD700;
+  cursor: default;
+}
+.header__text-h1 {
+  padding: 1rem;
+  font-size: 3.2rem;
+}
+.header__text-p {
+  font-size: 4.8rem;
+}
+.header__shadow {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 2;
+}
+
+.add-window {
+  position: fixed;
+  display: block;
+  height: 80vh;
+  width: 80%;
+  margin: 5% 10%;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.8);
+  background-color: #979797;
+  z-index: 100;
+}
+.add-window__turnoff {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  border: none;
+  background: none;
+}
+.add-window__turnoff:hover {
+  cursor: pointer;
+}
+
+.cancel {
+  display: none;
+}
+
+.h2 {
+  margin-top: 2rem;
+  font-size: 2.4rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFD700;
+}
+
+.select-counter {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 20%;
+  flex-direction: row;
+}
+.select-counter__champion {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.6rem;
+}
+.select-counter__role {
+  width: 20%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 1.6rem;
+}
+.select-counter__role-select {
+  margin-top: 1rem;
+  height: 30px;
+}
+.select-counter__add {
+  margin-top: 2rem;
+  display: flex;
+  height: 50%;
+  justify-content: center;
+  text-align: center;
+}
+.select-counter__addBtn {
+  display: flex;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  background: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: lime;
+  transition: border 0.3s 0.3s, scale 0.5s;
+}
+.select-counter__addBtn:hover {
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  scale: 1.1;
+}
+.select-counter__info {
+  font-size: 1.2rem;
+  width: 20%;
+  justify-content: end;
+}
+.select-counter__info p {
+  margin-top: 1.2rem;
+  margin-left: 8rem;
+}
+.select-counter__info:hover {
+  cursor: default;
+}
+
+input {
+  margin-top: 1rem;
+  width: 200px;
+  height: 30px;
+  border: none;
+  font-size: 2rem;
+}
+
+.own-counter {
+  margin-top: 2rem;
+  position: relative;
+  display: flex;
+}
+.own-counter__champion {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.6rem;
+}
+.own-counter__description {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.6rem;
+}
+.own-counter__description textarea {
+  margin-top: 1rem;
+  resize: none;
+  min-width: 300px;
+  max-width: 300px;
+  max-height: 80px;
+}
+.own-counter__description p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.section {
+  position: relative;
+  margin: 5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.search-engine {
+  position: absolute;
+  display: block;
+  top: -40px;
+  right: 5vh;
+}
+
+.table {
+  position: relative;
+  width: 1200px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: default;
+}
+
+.table-header {
+  font-size: 2.4rem;
+  background-color: rgb(90, 90, 90);
+  color: #FFD700;
+}
+.table-header th {
+  padding: 5px 0px;
+}
+.table-header__th {
+  width: 258px;
+}
+.table-header__role {
+  width: 68px;
+}
+.table-header__btn {
+  width: 50px;
+}
+
+.btn {
+  margin-top: 5px;
+  border: none;
+  background: none;
+  transition: scale 0.5s;
+}
+
+.btn:hover {
+  cursor: pointer;
+  scale: 1.3;
+}
+
+.counter {
+  text-align: center;
+  font-size: 2rem;
+  background-color: rgb(180, 180, 180);
+  color: #0028FF;
+}
+
+.edit-btn {
+  background-image: url(../img/edit.svg);
+  background-position: center;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+  transition: scale 0.5s;
+  transform: translateY(-3px);
+}
+
+.edit-btn:hover {
+  cursor: pointer;
+  scale: 1.2;
+}
+
+.delete-btn {
+  background-image: url(../img/x-square.svg);
+  background-position: center;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+  transition: scale 0.5s;
+  transform: translateY(-3px);
+}
+
+.delete-btn:hover {
+  cursor: pointer;
+  scale: 1.2;
+}
+
+.off {
+  display: none;
+}/*# sourceMappingURL=main.css.map */
