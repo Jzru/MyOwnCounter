@@ -113,7 +113,9 @@ const addCounter = () => {
     deleteBtn.addEventListener('click', remove);
     editBtn.addEventListener('click', editCounter);
 
-
+    localStorage.setItem("save", JSON.stringify(arrayWithStringsToSave))
+    
+    
 }
 
 const searchEngine = () => {
@@ -125,7 +127,7 @@ const searchChampion = e => {
     const tablePosition = document.querySelectorAll('.test')
     const text = e.target.value.toLowerCase();
     console.log(text);
-
+    
     tablePosition.forEach(el => {
         if(el.textContent.toLowerCase().indexOf(text) !== -1){
             console.log(`object`);
@@ -133,9 +135,10 @@ const searchChampion = e => {
         } else {
             el.parentElement.classList.add('cancel')
         }
- })
+    })
 }
 
+localStorage.getItem('save')
 
 turnOffBtn.addEventListener('click', closeWindow);
 addBtn.addEventListener('click', openWindow);
