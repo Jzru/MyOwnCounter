@@ -16,7 +16,9 @@ const search = document.querySelector('.search-engine')
 const tablePosition = document.querySelectorAll('td')
 const inputSearch = document.querySelector('#search')
 let idNumber = 0;
-let saveChanges = []
+
+
+
 
 const closeWindow = () => {
     addWindow.classList.add('cancel');
@@ -111,27 +113,27 @@ const addCounter = () => {
     deleteBtn.addEventListener('click', remove);
     editBtn.addEventListener('click', editCounter);
 
-    const counterObject = {
-        id: idNumber,
-        champion: selectedCounter.value,
-        role: role.value,
-        counters: [
-          {
-            counter: counterOne.value,
-            description: descriptionOne.value
-          },
-          {
-            counter: counterTwo.value,
-            description: descriptionTwo.value
-          },
-          {
-            counter: counterThree.value,
-            description: descriptionThree.value
-          }
-        ]
-      };
+    // const counterObject = {
+    //     id: idNumber,
+    //     champion: selectedCounter.value,
+    //     role: role.value,
+    //     counters: [
+    //       {
+    //         counter: counterOne.value,
+    //         description: descriptionOne.value
+    //       },
+    //       {
+    //         counter: counterTwo.value,
+    //         description: descriptionTwo.value
+    //       },
+    //       {
+    //         counter: counterThree.value,
+    //         description: descriptionThree.value
+    //       }
+    //     ]
+    //   };
 
-    saveChanges.push(counterObject)
+    saveChanges.push(newCounter)
 
     localStorage.setItem("save", JSON.stringify(saveChanges))
     
@@ -158,7 +160,14 @@ const searchChampion = e => {
     })
 }
 
-localStorage.getItem('save')
+const checkSave = (() => {
+  if (localStorage.getItem('save')) {
+    return JSON.parse(localStorage.getItem('save'));
+  } else {
+    const saveChanges = [];
+    return saveChanges;
+  }
+})(); 
 
 turnOffBtn.addEventListener('click', closeWindow);
 addBtn.addEventListener('click', openWindow);
