@@ -132,7 +132,6 @@ const addCounter = () => {
     //       }
     //     ]
     //   };
-
     saveChanges.push(newCounter)
 
     localStorage.setItem("save", JSON.stringify(saveChanges))
